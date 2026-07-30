@@ -384,8 +384,8 @@
                 </div>
                 
                 <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
+                   <form id="contact-form" class="space-y-4">
+                        <input type="hidden" name="access_key" value="粘贴你实际生成的KEY">
                         <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
     
                         <div>
@@ -398,10 +398,11 @@
                             <textarea name="Message" placeholder="Tell us about your project requirements or requested gear ratios..." rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white"></textarea>
                         </div>
     
-                        <button type="submit" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
+                        <button type="submit" id="submit-btn" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
                             Send Message
                         </button>
                     </form>
+                    <div id="result" class="text-center text-sm mt-2 font-medium hidden"></div>
                 </div>
             </div>
         </div>
@@ -425,6 +426,50 @@
     </footer>
         
     <script>
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('result');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
+    
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let resJson = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Message sent successfully!";
+                    result.className = "text-center text-sm mt-2 font-medium text-green-600";
+                    form.reset();
+                } else {
+                    // 如果报错，直接把错误原因打印在网页上！
+                    result.innerHTML = resJson.message || "Something went wrong!";
+                    result.className = "text-center text-sm mt-2 font-medium text-red-600";
+                }
+            })
+            .catch(error => {
+                result.innerHTML = "Network Error! Please check your connection or CORS settings.";
+                result.className = "text-center text-sm mt-2 font-medium text-red-600";
+            })
+            .then(function() {
+                submitBtn.innerText = "Send Message";
+                submitBtn.disabled = false;
+                result.classList.remove('hidden');
+            });
+        });
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
