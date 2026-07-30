@@ -384,9 +384,9 @@
                 </div>
                 
                 <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
-                    <form action="https://formsubmit.co/sales@xiorve.com" method="POST" class="space-y-4">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="XIORVE Website New Inquiry!">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
+                        <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
     
                         <div>
                             <input type="text" name="Name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
@@ -397,6 +397,7 @@
                         <div>
                             <textarea name="Message" placeholder="Tell us about your project requirements or requested gear ratios..." rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white"></textarea>
                         </div>
+    
                         <button type="submit" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
                             Send Message
                         </button>
@@ -451,12 +452,7 @@
             
             alert(`Downloading ${filename}... (Demo - in real deployment these would be actual PDFs)`);
         }
-        
-        function submitForm() {
-            alert("Thank you! Your message has been sent. Our team will contact you shortly.");
-            document.getElementById('contact-form').reset();
-        }
-        
+    
         document.addEventListener('keydown', function(e) {
             if (e.key === '/' && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
                 e.preventDefault();
