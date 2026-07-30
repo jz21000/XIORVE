@@ -1,342 +1,350 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XIORVE | Precision Reducers for Robotics & Industrial Automation</title>
+    <title>XIORVE | High-Precision Motion Transmission & Reducer Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        :root {
-            --primary: #2563eb;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: #0f172a;
         }
-        
+
         .hero-bg {
-            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            background: radial-gradient(circle at top right, #eff6ff 0%, #f8fafc 100%);
         }
-        
+
         .nav-link {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
         }
-        
+
         .nav-link:hover {
             color: #2563eb;
-            transform: translateY(-1px);
         }
-        
+
         .product-card {
-            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -6px rgba(37, 99, 235, 0.12);
         }
-        
-        .section-header {
-            position: relative;
-        }
-        
-        .section-header:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #2563eb;
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
         }
     </style>
 </head>
-<body class="bg-white text-gray-900">
-    <!-- NAV -->
-    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-x-3">
-                <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">X</div>
-                <div>
-                    <span class="font-bold text-2xl tracking-tighter">XIORVE</span>
-                </div>
+<body class="bg-slate-50 antialiased">
+
+    <nav class="bg-white/90 glass-panel border-b border-slate-200/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3 cursor-pointer" onclick="navigateTo('home')">
+                <div class="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-blue-500/20">X</div>
+                <span class="font-extrabold text-2xl tracking-tight text-slate-900">XIORVE</span>
             </div>
             
-            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                <a href="#home" onclick="navigateTo('home')" class="nav-link text-gray-600 hover:text-blue-600">Home</a>
-                <a href="#products" onclick="navigateTo('products')" class="nav-link text-gray-600 hover:text-blue-600">Products</a>
-                <a href="#resources" onclick="navigateTo('resources')" class="nav-link text-gray-600 hover:text-blue-600">Resources</a>
-                <a href="#applications" onclick="navigateTo('applications')" class="nav-link text-gray-600 hover:text-blue-600">Applications</a>
-                <a href="#contact" onclick="navigateTo('contact')" class="nav-link text-gray-600 hover:text-blue-600">Contact</a>
+            <div class="hidden md:flex items-center gap-x-7 text-sm font-semibold text-slate-600">
+                <a href="#home" onclick="navigateTo('home')" class="nav-link">Home</a>
+                <a href="#products" onclick="navigateTo('products')" class="nav-link">Products</a>
+                <a href="#applications" onclick="navigateTo('applications')" class="nav-link">Applications</a>
+                <a href="#resources" onclick="navigateTo('resources')" class="nav-link">Resources</a>
+                <a href="#contact" onclick="navigateTo('contact')" class="nav-link">Contact</a>
             </div>
             
             <div class="flex items-center gap-x-4">
                 <a href="#contact" onclick="navigateTo('contact')" 
-                   class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold transition-all">
+                   class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold shadow-sm transition-all duration-200">
                     Get a Quote
                 </a>
-                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                <button onclick="toggleMobileMenu()" class="md:hidden text-xl text-slate-700 p-1">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-6 py-8 flex flex-col gap-y-6 text-lg">
-                <a href="#home" onclick="navigateTo('home')" class="nav-link">Home</a>
-                <a href="#products" onclick="navigateTo('products')" class="nav-link">Products</a>
-                <a href="#resources" onclick="navigateTo('resources')" class="nav-link">Resources</a>
-                <a href="#applications" onclick="navigateTo('applications')" class="nav-link">Applications</a>
-                <a href="#contact" onclick="navigateTo('contact')" class="nav-link">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-6 py-4 flex flex-col gap-y-3 font-medium text-slate-700">
+                <a href="#home" onclick="navigateTo('home')" class="py-1">Home</a>
+                <a href="#products" onclick="navigateTo('products')" class="py-1">Products</a>
+                <a href="#applications" onclick="navigateTo('applications')" class="py-1">Applications</a>
+                <a href="#resources" onclick="navigateTo('resources')" class="py-1">Resources</a>
+                <a href="#contact" onclick="navigateTo('contact')" class="py-1">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section id="home" class="hero-bg pt-16 pb-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-[1fr_1fr] gap-10 items-center">
-            <div class="space-y-8">
-                 <h1 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-                    Built for Robotics.<br>
-                    <span class="text-blue-600">Engineered for Precision.</span>
+    <section id="home" class="hero-bg py-12 md:py-16 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200/60 rounded-full text-blue-700 text-xs font-bold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> Precision Motion Control
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    High-Precision Reducers.<br>
+                    <span class="text-blue-600">Engineered for Robotics Excellence.</span>
                 </h1>
                 
-                <p class="text-lg text-gray-600 max-w-md">
-                     XIORVE specializes in high-precision reducers and robotic motion solutions,
-                     delivering reliable transmission components for industrial robots,
-                     automation systems, and advanced manufacturing applications.
+                <p class="text-base text-slate-600 max-w-xl leading-relaxed">
+                    XIORVE designs and manufactures industrial-grade <strong>XHR Harmonic Reducers</strong> and <strong>XCR Cycloidal Reducers</strong>, delivering zero-backlash, high torque density, and ultimate dynamic accuracy for global automation leaders.
                 </p>
                 
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap gap-3 pt-2">
                     <a href="#products" onclick="navigateTo('products')" 
-                       class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-semibold flex items-center gap-x-2 text-lg">
-                        View Products
-                        <i class="fas fa-arrow-right"></i>
+                       class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold flex items-center gap-x-2 text-sm shadow-md shadow-blue-500/20 transition-all">
+                        Explore Series
+                        <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                     <a href="#resources" onclick="navigateTo('resources')" 
-                       class="px-8 py-4 border border-gray-300 hover:bg-gray-50 rounded-2xl font-semibold flex items-center gap-x-2 text-lg">
-                        Download Resources
+                       class="px-6 py-3 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-xl font-semibold flex items-center gap-x-2 text-sm shadow-sm transition-all">
+                        <i class="fas fa-file-pdf text-blue-600"></i> Technical Guide
                     </a>
                 </div>
             </div>  
-            <div class="relative flex justify-center">
-                <img src="images/hero-robot.jpg" alt="XIORVE Precision Reducers" class="rounded-3xl shadow-2xl w-full">
-            </div>
-        </div>
-    </section>
-
-    <!-- APPLICATIONS -->
-    <section id="applications" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-semibold tracking-widest">APPLICATIONS</span>
-                <h2 class="text-5xl font-bold mt-3">Applications Across Robotics & Industrial Automation</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Humanoid -->
-                <div class="product-card bg-white border border-gray-100 rounded-3xl overflow-hidden group">
-                    <div class="aspect-[3/2] bg-gray-100 overflow-hidden">
-                        <img src="images/app-humanoid.jpg" alt="Humanoid Robot" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-semibold text-xl mb-2">Humanoid Robots</h3>
-                        <p class="text-gray-600">Precision motion solutions for humanoid robot joints and actuators.</p>
-                    </div>
-                </div>
-                
-                <!-- Collaborative -->
-                <div class="product-card bg-white border border-gray-100 rounded-3xl overflow-hidden group">
-                    <div class="aspect-[3/2] bg-gray-100 overflow-hidden">
-                        <img src="images/app-cobot.jpg" alt="Collaborative Robot" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-semibold text-xl mb-2">Collaborative Robots</h3>
-                        <p class="text-gray-600">Reliable motion transmission for collaborative and industrial robots.</p>
-                    </div>
-                </div>
-                
-                <!-- Equipment -->
-                <div class="product-card bg-white border border-gray-100 rounded-3xl overflow-hidden group">
-                    <div class="aspect-[3/2] bg-gray-100 overflow-hidden">
-                        <img src="images/app-Equipment.jpg" alt="Semiconductor Equipment" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-semibold text-xl mb-2">Semiconductor Equipment</h3>
-                        <p class="text-gray-600">High precision reducers for semiconductor and precision manufacturing systems.</p>
-                    </div>
-                </div>
-                
-                <!-- Automation -->
-                <div class="product-card bg-white border border-gray-100 rounded-3xl overflow-hidden group">
-                    <div class="aspect-[3/2] bg-gray-100 overflow-hidden">
-                        <img src="images/app-Automation.jpg" alt="Industrial Automation" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-semibold text-xl mb-2">Industrial Automation</h3>
-                        <p class="text-gray-600">High-performance transmission solutions for automation machinery and precision equipment.</p>
-                    </div>
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md bg-white p-2 rounded-2xl shadow-xl border border-slate-200/80">
+                    <img src="images/hero-robot.jpg" alt="XIORVE Precision Reducers" class="rounded-xl w-full object-cover aspect-[4/3]">
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- PRODUCTS -->
-    <section id="products" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
+        <div class="max-w-7xl mx-auto px-6 mt-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-white/80 border border-slate-200 rounded-2xl shadow-sm text-center">
                 <div>
-                    <span class="uppercase text-blue-600 font-medium">OUR PRODUCTS</span>
-                    <h2 class="text-6xl font-bold mt-2">Precision Reducers for Robotics & Automation</h2>
+                    <div class="text-xl md:text-2xl font-bold text-blue-600">≤ 10 arcsec</div>
+                    <div class="text-xs font-medium text-slate-500 uppercase tracking-wider mt-0.5">Positional Backlash</div>
+                </div>
+                <div>
+                    <div class="text-xl md:text-2xl font-bold text-blue-600">High Rigidity</div>
+                    <div class="text-xs font-medium text-slate-500 uppercase tracking-wider mt-0.5">Cross Roller Bearings</div>
+                </div>
+                <div>
+                    <div class="text-xl md:text-2xl font-bold text-blue-600">1:30 - 1:160</div>
+                    <div class="text-xs font-medium text-slate-500 uppercase tracking-wider mt-0.5">Reduction Ratios</div>
+                </div>
+                <div>
+                    <div class="text-xl md:text-2xl font-bold text-blue-600">100% Tested</div>
+                    <div class="text-xs font-medium text-slate-500 uppercase tracking-wider mt-0.5">QC & Performance</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-16 bg-slate-100/70">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">PRODUCT PORTFOLIO</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Precision Reducers</h2>
+                </div>
+                <p class="text-sm text-slate-500 max-w-md mt-2 md:mt-0">Compact, high-torque drivetrain components optimized for seamless integration into modern robotic joints.</p>
+            </div>
             
-            <div class="grid md:grid-cols-2 gap-10">
-               <!-- XHR Harmonic Reducer -->
-               <div class="bg-white rounded-3xl p-8 border border-gray-100 product-card">
-                  <div class="aspect-[3/2] bg-gray-100 overflow-hidden">
-                     <img src="images/prod-xhr.png" alt="XHR Harmonic Reducer" class="w-full h-full object-cover">
+            <div class="grid md:grid-cols-2 gap-8">
+               <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col justify-between shadow-sm">
+                  <div>
+                      <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5">
+                         <img src="images/prod-xhr.png" alt="XHR Harmonic Reducer" class="w-full h-full object-contain p-4">
+                      </div>
+
+                      <div class="flex justify-between items-start mb-2">
+                          <h3 class="text-2xl font-bold text-slate-900">XHR Series</h3>
+                          <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200">Harmonic Drive</span>
+                      </div>
+                      <p class="text-xs font-medium text-slate-400 mb-3">Strain Wave Precision Gearing System</p>
+                      <p class="text-sm text-slate-600 mb-5 leading-relaxed">
+                         Engineered for lightweight, high-torque, and near-zero backlash applications. Ideal for robotic joints, cobots, and medical surgical arms.
+                      </p>
+                      
+                      <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6">
+                         <li class="flex items-center gap-x-2">
+                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            Ultra-flat hollow-shaft & component design options
+                         </li>
+                         <li class="flex items-center gap-x-2">
+                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            Exceptional positioning accuracy & low hysteresis
+                         </li>
+                         <li class="flex items-center gap-x-2">
+                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            High torque capacity with long operational service life
+                         </li>
+                      </ul>
                   </div>
 
-                  <h3 class="text-2xl font-semibold mb-2">
-                    XHR Harmonic Reducer
-                  </h3>
-                  <p class="text-gray-500 mb-6">
-                    High precision motion transmission for robotics and industrial automation.
-                  </p>
-                  <ul class="space-y-3 text-gray-600 mb-8">
-                     <li class="flex items-start gap-x-3">
-                        <span class="text-emerald-500 mt-1">✔</span>
-                        Compact Structure
-                     </li>
-                     <li class="flex items-start gap-x-3">
-                        <span class="text-emerald-500 mt-1">✔</span>
-                        High Positioning Accuracy
-                     </li>
-                     <li class="flex items-start gap-x-3">
-                        <span class="text-emerald-500 mt-1">✔</span>
-                        Low Backlash
-                     </li>
-                </ul>
-                <a href="downloads/XHR_Technical_Package.zip"
-                  download
-                  class="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-x-2">
-                     View Product
-                     <i class="fas fa-arrow-right text-xs"></i>
-                 </a>
-
-            </div>
+                  <a href="downloads/XHR_Technical_Package.zip" download 
+                     class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                      <i class="fas fa-download"></i> Download Technical Specs (ZIP)
+                  </a>
+               </div>
                 
-                <!-- XCR Cycloidal Reducer -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-100 product-card">
-                     <div class="aspect-[3/2] bg-gray-100 overflow-hidden">
-                         <img src="images/prod-xcr.png"
-                         alt="XCR Cycloidal Reducer"
-                         class="w-full h-full object-cover">
-             </div>
-             <h3 class="text-2xl font-semibold mb-2">
-                XCR Cycloidal Reducer
-             </h3>
-             <p class="text-gray-500 mb-6">
-                 High rigidity transmission for heavy-load robotics and precision automation.
-             </p>
-             <ul class="space-y-3 text-gray-600 mb-8">
-                 <li class="flex items-start gap-x-3">
-                     <span class="text-emerald-500 mt-1">✔</span>
-                     High Torsional Rigidity
-                 </li>
-                 <li class="flex items-start gap-x-3">
-                     <span class="text-emerald-500 mt-1">✔</span>
-                     High Shock Resistance
-                 </li>
-                 <li class="flex items-start gap-x-3">
-                     <span class="text-emerald-500 mt-1">✔</span>
-                     Heavy-duty Applications
-                 </li>
-            </ul>
-            <a href="downloads/XCR_Technical_Package.zip"
-               download
-               class="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-x-2">
-                 View Product
-                 <i class="fas fa-arrow-right text-xs"></i>
-             </a>
+               <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col justify-between shadow-sm">
+                  <div>
+                      <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5">
+                         <img src="images/prod-xcr.png" alt="XCR Cycloidal Reducer" class="w-full h-full object-contain p-4">
+                      </div>
+
+                      <div class="flex justify-between items-start mb-2">
+                          <h3 class="text-2xl font-bold text-slate-900">XCR Series</h3>
+                          <span class="px-2.5 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-md border border-amber-200">Cycloidal / RV Drive</span>
+                      </div>
+                      <p class="text-xs font-medium text-slate-400 mb-3">Heavy-Load High-Rigidity Transmission</p>
+                      <p class="text-sm text-slate-600 mb-5 leading-relaxed">
+                          Designed for high impact resistance and severe duty cycles. Provides robust torsional stiffness for heavy-duty industrial robots.
+                      </p>
+                      
+                      <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6">
+                         <li class="flex items-center gap-x-2">
+                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            Extreme shock load capability (up to 500% rated torque)
+                         </li>
+                         <li class="flex items-center gap-x-2">
+                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            Superior torsional rigidity for heavy payload handling
+                         </li>
+                         <li class="flex items-center gap-x-2">
+                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            Stable speed reduction with low vibration signature
+                         </li>
+                      </ul>
+                  </div>
+
+                  <a href="downloads/XCR_Technical_Package.zip" download 
+                     class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                      <i class="fas fa-download"></i> Download Technical Specs (ZIP)
+                  </a>
+               </div>
+            </div>
         </div>
     </section>
 
-    <!-- RESOURCES / DOWNLOADS -->
-    <section id="resources" class="py-24 bg-white">
+    <section id="applications" class="py-16 bg-white border-t border-slate-200/80">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-16">
-                <div class="md:col-span-5">
-                    <h2 class="text-5xl font-bold mb-6">Resources</h2>
-                    <p class="text-xl text-gray-600">Download XIORVE business documents and technical references.</p>
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">INDUSTRIES & USAGE</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Target Robotics Applications</h2>
+                <p class="text-sm text-slate-500 mt-2">Precision-matched drive solutions built for harsh environments and micron-level accuracy requirements.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-humanoid.jpg" alt="Humanoid Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Humanoid Actuators</h3>
+                        <p class="text-xs text-slate-500 leading-snug">Compact joint modules for leg and arm motion control.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-cobot.jpg" alt="Collaborative Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Collaborative Robots</h3>
+                        <p class="text-xs text-slate-500 leading-snug">Smooth, precise transmission for multi-axis Cobots.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-Equipment.jpg" alt="Semiconductor Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Semiconductor Systems</h3>
+                        <p class="text-xs text-slate-500 leading-snug">Wafer handling and ultra-clean stage positioners.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-Automation.jpg" alt="Industrial Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Industrial Automation</h3>
+                        <p class="text-xs text-slate-500 leading-snug">CNC rotary tables, indexing heads & medical equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="py-16 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-5 space-y-4">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">TECHNICAL DOCUMENTATION</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Engineering Downloads</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">Access official XIORVE commercial documentation, technical drawing specifications, and installation manuals.</p>
                     
-                    <div class="mt-12 space-y-8">
-                        <div onclick="downloadPDF('catalog')" class="group cursor-pointer flex gap-6 items-center border-b pb-8 hover:border-blue-200 transition-colors">
-                            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl text-blue-600">
-                                📘
+                    <div class="pt-2 space-y-3">
+                        <div onclick="downloadPDF('catalog')" class="p-4 bg-white border border-slate-200 hover:border-blue-400 rounded-xl cursor-pointer flex items-center justify-between shadow-sm transition-all group">
+                            <div class="flex items-center gap-x-3">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-lg">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Commercial Terms & Ordering</div>
+                                    <div class="text-xs text-slate-400">PDF • Standard Models & Ordering Codes</div>
+                                </div>
                             </div>
-                            <div class="flex-1">
-                                <div class="font-semibold text-xl group-hover:text-blue-600">XIORVE Business Terms</div>
-                                <div class="text-gray-500">PDF • Commercial Terms & Ordering Information</div>
-                            </div>
-                            <div class="text-blue-600">
-                                <i class="fas fa-download text-2xl"></i>
-                            </div>
+                            <i class="fas fa-download text-slate-400 group-hover:text-blue-600 transition-colors text-sm"></i>
                         </div>
                         
-                        <div onclick="downloadPDF('profile')" class="group cursor-pointer flex gap-6 items-center border-b pb-8 hover:border-blue-200 transition-colors">
-                            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl text-amber-600">
-                                📋
+                        <div onclick="downloadPDF('profile')" class="p-4 bg-white border border-slate-200 hover:border-blue-400 rounded-xl cursor-pointer flex items-center justify-between shadow-sm transition-all group">
+                            <div class="flex items-center gap-x-3">
+                                <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center text-lg">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Engineering & Installation Guide</div>
+                                    <div class="text-xs text-slate-400">PDF • Lubrication, Tolerances & Assembly</div>
+                                </div>
                             </div>
-                            <div class="flex-1">
-                                <div class="font-semibold text-xl group-hover:text-blue-600">XIORVE Technical Manual</div>
-                                <div class="text-gray-500">PDF • Installation & Engineering Guide</div>
-                            </div>
-                            <div class="text-blue-600">
-                                <i class="fas fa-download text-2xl"></i>
-                            </div>
+                            <i class="fas fa-download text-slate-400 group-hover:text-blue-600 transition-colors text-sm"></i>
                         </div>
                     </div>
                 </div>
                 
-                <div class="md:col-span-7 bg-gray-50 rounded-3xl p-10">
-                    <h3 class="font-semibold text-2xl mb-8">Why Choose XIORVE</h3>
-                    <div class="grid grid-cols-2 gap-8">
-                        <div class="space-y-8">
+                <div class="md:col-span-7 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900 mb-6 flex items-center gap-x-2">
+                        <i class="fas fa-award text-blue-600"></i> Why Engineers Choose XIORVE
+                    </h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-4">
                             <div>
-                                <div class="flex items-center gap-x-4 mb-3">
-                                    <div class="text-blue-600"><i class="fas fa-cogs text-3xl"></i></div>
-                                    <div class="font-semibold">Engineering Focus</div>
+                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
+                                    <i class="fas fa-microchip text-blue-600 text-xs"></i> Motion Control Focus
                                 </div>
-                                <p class="text-sm text-gray-600">Focused exclusively on robotics motion control.</p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Exclusively dedicated to precision strain-wave and cycloidal transmission systems.</p>
                             </div>
                             <div>
-                                <div class="flex items-center gap-x-4 mb-3">
-                                    <div class="text-blue-600"><i class="fas fa-shield-alt text-3xl"></i></div>
-                                    <div class="font-semibold">Stable Manufacturing</div>
+                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
+                                    <i class="fas fa-sliders-h text-blue-600 text-xs"></i> Strict Tolerances
                                 </div>
-                                <p class="text-sm text-gray-600">Reliable production capacity and strict quality control.</p>
+                                <p class="text-xs text-slate-500 leading-relaxed">State-of-the-art grinding and gear meshing inspection for long lifespan.</p>
                             </div>
                         </div>
-                        <div class="space-y-8">
+                        <div class="space-y-4">
                             <div>
-                                <div class="flex items-center gap-x-4 mb-3">
-                                    <div class="text-blue-600"><i class="fas fa-headset text-3xl"></i></div>
-                                    <div class="font-semibold">Fast Response</div>
+                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
+                                    <i class="fas fa-globe-europe text-blue-600 text-xs"></i> European Standards
                                 </div>
-                                <p class="text-sm text-gray-600">Professional support whenever you need.</p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Fully aligned with ISO quality frameworks and European industrial requirements.</p>
                             </div>
                             <div>
-                                <div class="flex items-center gap-x-4 mb-3">
-                                    <div class="text-blue-600"><i class="fas fa-globe text-3xl"></i></div>
-                                    <div class="font-semibold">European Market</div>
+                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
+                                    <i class="fas fa-truck-fast text-blue-600 text-xs"></i> Fast Technical Support
                                 </div>
-                                <p class="text-sm text-gray-600">Better communication, faster service.</p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Direct 3D Step CAD files and selection support within 24 hours.</p>
                             </div>
                         </div>
                     </div>
@@ -345,46 +353,49 @@
         </div>
     </section>
 
-
-    <!-- CONTACT -->
-    <section id="contact" class="pt-0 pb-0 bg-white">
+    <section id="contact" class="py-16 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
+            <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-5xl font-bold leading-tight">Ready to Build Your Next Robotics Project?</h2>
-                    <p class="mt-8 text-lg text-gray-600">Whether you need harmonic reducers, joint modules, or customized solutions, our team is ready to help.</p>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">GET IN TOUCH</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1 leading-tight">Ready to Build Your Next Robotics Project?</h2>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Whether you need harmonic reducers, joint modules, or customized transmission solutions, our engineering team is ready to help.</p>
                     
-                    <div class="mt-12 space-y-8">
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">✉️</div>
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-lg flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <div>
-                                <div class="font-medium">Email</div>
-                                <a href="mailto:sales@xiorve.com" class="text-blue-600 hover:underline">sales@xiorve.com</a>
+                                <div class="text-xs text-slate-400 font-medium uppercase">Email Sales Inquiry</div>
+                                <a href="mailto:sales@xiorve.com" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">sales@xiorve.com</a>
                             </div>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">📱</div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 text-lg flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
                             <div>
-                                <div class="font-medium">WhatsApp</div>
-                                <a href="#" class="text-blue-600 hover:underline">+852 6143 5966</a>
+                                <div class="text-xs text-slate-400 font-medium uppercase">WhatsApp Direct</div>
+                                <a href="https://wa.me/85261435966" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">+852 6143 5966</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 rounded-3xl p-10">
-                    <form id="contact-form" class="space-y-6">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
+                    <form id="contact-form" class="space-y-4">
                         <div>
-                            <input type="text" placeholder="Your Name" class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-blue-500">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
                         </div>
                         <div>
-                            <input type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-blue-500">
+                            <input type="email" placeholder="Business Email" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
                         </div>
                         <div>
-                            <textarea placeholder="Tell us about your project..." rows="5" class="w-full px-6 py-4 rounded-3xl border border-gray-200 focus:outline-none focus:border-blue-500"></textarea>
+                            <textarea placeholder="Tell us about your project requirements or requested gear ratios..." rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white"></textarea>
                         </div>
                         <button type="button" onclick="submitForm()" 
-                                class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl text-lg">
+                                class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
                             Send Message
                         </button>
                     </form>
@@ -393,39 +404,24 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-10">
-            <!-- bottom line -->
-            <div class="border-t border-gray-700 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <!-- Left -->
-                    <div class="flex items-center gap-4">
-                       <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-gray-900 font-bold text-4xl">
-                            X
-                       </div>
-                       <div>
-                            <div class="font-bold text-3xl">
-                               XIORVE
-                            </div>
-
-                            <div class="text-gray-400 text-sm mt-1">
-                                Focused on Robotics. Built for Precision.
-                            </div>
-                        </div>
-                  </div>
-                  <!-- Right -->
-                  <div class="text-gray-500 text-sm">
-                     © 2026 XIORVE. All Rights Reserved.
-                  </div>
-             </div>
-          </div>
-      </div>
+    <footer class="bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black text-lg">X</div>
+                    <div>
+                        <span class="font-extrabold text-xl tracking-tight">XIORVE</span>
+                        <span class="text-slate-400 text-xs block">Focused on Robotics. Built for Precision.</span>
+                    </div>
+                </div>
+                <div class="text-slate-400 text-xs">
+                    © 2026 XIORVE. All Rights Reserved. Precision Motion Transmission.
+                </div>
+            </div>
+        </div>
     </footer>
-       
-    <script>
-            // Tailwind script already loaded
         
+    <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
@@ -433,7 +429,6 @@
         
         function navigateTo(section) {
             document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
-            // Close mobile menu if open
             document.getElementById('mobile-menu').classList.add('hidden');
         }
         
@@ -445,7 +440,6 @@
                 filename = 'Installation & Engineering Guide.pdf';
             }
             
-            // Simulate download
             const link = document.createElement('a');
             link.href = 'downloads/' + filename;
             link.download = filename;
@@ -461,19 +455,11 @@
             document.getElementById('contact-form').reset();
         }
         
-        // Keyboard shortcut for mobile menu
         document.addEventListener('keydown', function(e) {
             if (e.key === '/' && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
                 e.preventDefault();
                 toggleMobileMenu();
             }
-        });
-        
-        // Scroll progress indicator (optional)
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            // Could add progress bar if wanted
         });
         
         console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
