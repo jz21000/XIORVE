@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             color: #0f172a;
@@ -103,7 +104,7 @@
                     </a>
                     <a href="#support" onclick="navigateTo('support')" 
                        class="px-6 py-3 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-xl font-semibold flex items-center gap-x-2 text-sm shadow-sm transition-all">
-                        <i class="fas fa-headset text-blue-600"></i> Customer Support
+                        <i class="fas fa-headset text-blue-600"></i> Technical Support
                     </a>
                 </div>
             </div>  
@@ -157,7 +158,6 @@
                             <h3 class="text-2xl font-bold text-slate-900">XHR Series</h3>
                             <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200">Harmonic Drive</span>
                         </div>
-                    
                         <p class="text-xs font-medium text-slate-400 mb-3">Strain Wave Precision Gearing System</p>
                         <p class="text-sm text-slate-600 mb-5 leading-relaxed">
                             Engineered for lightweight, high-torque, and near-zero backlash applications. Ideal for robotic joints, cobots, and medical surgical arms.
@@ -461,53 +461,60 @@
             </div>
         </div>
     </section>
-<section id="applications" class="py-16 bg-white border-y border-slate-200/80">
+
+    <section id="applications" class="py-16 bg-white border-t border-slate-200/80">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Target Industries</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Industrial Applications</h2>
-                <p class="text-slate-600 text-sm mt-2">
-                    Delivering motion control accuracy to sectors where precision, reliability, and compact integration are non-negotiable.
-                </p>
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">INDUSTRIES & USAGE</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Target Robotics Applications</h2>
+                <p class="text-sm text-slate-500 mt-2">Precision-matched drive solutions built for harsh environments and micron-level accuracy requirements.</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
-                        <i class="fas fa-robot"></i>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-humanoid.jpg" alt="Humanoid Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="font-bold text-slate-900 text-sm mb-1">Industrial Robotics</h3>
-                    <p class="text-xs text-slate-500">6-axis articulated arms, SCARA, and delta robots requiring compact joint speed reduction.</p>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Humanoid Actuators</h3>
+                        <p class="text-xs text-slate-500 leading-snug">Compact joint modules for leg and arm motion control.</p>
+                    </div>
                 </div>
                 
-                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
-                        <i class="fas fa-microchip"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-cobot.jpg" alt="Collaborative Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="font-bold text-slate-900 text-sm mb-1">Semiconductor Equipment</h3>
-                    <p class="text-xs text-slate-500">Wafer handling systems and cleanroom pick-and-place automation with low backlash.</p>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Collaborative Robots</h3>
+                        <p class="text-xs text-slate-500 leading-snug">Smooth, precise transmission for multi-axis Cobots.</p>
+                    </div>
                 </div>
                 
-                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
-                        <i class="fas fa-user-md"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-Equipment.jpg" alt="Semiconductor Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="font-bold text-slate-900 text-sm mb-1">Medical Technology</h3>
-                    <p class="text-xs text-slate-500">Surgical robotics, diagnostic positioning platforms, and high-precision imaging drives.</p>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Semiconductor Systems</h3>
+                        <p class="text-xs text-slate-500 leading-snug">Wafer handling and ultra-clean stage positioners.</p>
+                    </div>
                 </div>
                 
-                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
-                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
-                        <i class="fas fa-satellite-dish"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
+                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
+                        <img src="images/app-Automation.jpg" alt="Industrial Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="font-bold text-slate-900 text-sm mb-1">Aerospace & Optics</h3>
-                    <p class="text-xs text-slate-500">Antenna tracking mechanisms, optical gimbals, and satellite positioning actuators.</p>
+                    <div class="p-4">
+                        <h3 class="font-bold text-slate-900 text-sm mb-1">Industrial Automation</h3>
+                        <p class="text-xs text-slate-500 leading-snug">CNC rotary tables, indexing heads & medical equipment.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="support" class="py-16 bg-slate-50">
+    <section id="support" class="py-16 bg-slate-50 border-t border-slate-200/85">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">CUSTOMER CENTER</span>
@@ -780,7 +787,7 @@
                 <ul class="space-y-2 text-xs">
                     <li><a href="#products" onclick="navigateTo('products')" class="hover:text-white transition-colors">XHR Harmonic Reducers</a></li>
                     <li><a href="#products" onclick="navigateTo('products')" class="hover:text-white transition-colors">XCR Cycloidal Reducers</a></li>
-                    <li><a href="#support" onclick="navigateTo('support')" class="hover:text-white transition-colors">Support & Payment Options</a></li>
+                    <li><a href="#support" onclick="navigateTo('support')" class="hover:text-white transition-colors">Support & Customer Center</a></li>
                     <li><a href="#contact" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Request Technical Quote</a></li>
                 </ul>
             </div>
@@ -811,24 +818,6 @@
         function navigateTo(section) {
             document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
             document.getElementById('mobile-menu').classList.add('hidden');
-        }
-        
-        function downloadPDF(type) {
-            let filename = '';
-            if (type === 'catalog') {
-                filename = 'Commercial Terms & Ordering information.pdf';
-            } else if (type === 'profile') {
-                filename = 'Installation & Engineering Guide.pdf';
-            }
-            
-            const link = document.createElement('a');
-            link.href = 'downloads/' + filename;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            alert(`Downloading ${filename}... (Demo - in real deployment these would be actual PDFs)`);
         }
     
         document.addEventListener('keydown', function(e) {
