@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             color: #0f172a;
@@ -54,7 +53,7 @@
                 <a href="#home" onclick="navigateTo('home')" class="nav-link">Home</a>
                 <a href="#products" onclick="navigateTo('products')" class="nav-link">Products</a>
                 <a href="#applications" onclick="navigateTo('applications')" class="nav-link">Applications</a>
-                <a href="#resources" onclick="navigateTo('resources')" class="nav-link">Resources</a>
+                <a href="#support" onclick="navigateTo('support')" class="nav-link">Support</a>
                 <a href="#contact" onclick="navigateTo('contact')" class="nav-link">Contact</a>
             </div>
             
@@ -74,7 +73,7 @@
                 <a href="#home" onclick="navigateTo('home')" class="py-1">Home</a>
                 <a href="#products" onclick="navigateTo('products')" class="py-1">Products</a>
                 <a href="#applications" onclick="navigateTo('applications')" class="py-1">Applications</a>
-                <a href="#resources" onclick="navigateTo('resources')" class="py-1">Resources</a>
+                <a href="#support" onclick="navigateTo('support')" class="py-1">Support</a>
                 <a href="#contact" onclick="navigateTo('contact')" class="py-1">Contact</a>
             </div>
         </div>
@@ -102,9 +101,9 @@
                         Explore Series
                         <i class="fas fa-arrow-right text-xs"></i>
                     </a>
-                    <a href="#resources" onclick="navigateTo('resources')" 
+                    <a href="#support" onclick="navigateTo('support')" 
                        class="px-6 py-3 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-xl font-semibold flex items-center gap-x-2 text-sm shadow-sm transition-all">
-                        <i class="fas fa-file-pdf text-blue-600"></i> Technical Guide
+                        <i class="fas fa-headset text-blue-600"></i> Customer Support
                     </a>
                 </div>
             </div>  
@@ -137,576 +136,673 @@
         </div>
     </section>
 
-<section id="products" class="py-16 bg-slate-100/70">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
-            <div>
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">PRODUCT PORTFOLIO</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Precision Reducers</h2>
-            </div>
-            <p class="text-sm text-slate-500 max-w-md mt-2 md:mt-0">Compact, high-torque drivetrain components optimized for seamless integration into modern robotic joints.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col justify-between shadow-sm">
+    <section id="products" class="py-16 bg-slate-100/70">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
                 <div>
-                    <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center">
-                        <img src="images/prod-xhr.png" alt="XHR Harmonic Reducer" class="w-full h-full object-contain scale-110 hover:scale-120 transition-transform duration-300">
-                    </div>
-
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold text-slate-900">XHR Series</h3>
-                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200">Harmonic Drive</span>
-                    </div>
-                    <p class="text-xs font-medium text-slate-400 mb-3">Strain Wave Precision Gearing System</p>
-                    <p class="text-sm text-slate-600 mb-5 leading-relaxed">
-                        Engineered for lightweight, high-torque, and near-zero backlash applications. Ideal for robotic joints, cobots, and medical surgical arms.
-                    </p>
-                    
-                    <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6">
-                        <li class="flex items-center gap-x-2">
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                            Ultra-flat hollow-shaft & component design options
-                        </li>
-                        <li class="flex items-center gap-x-2">
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                            Exceptional positioning accuracy & low hysteresis
-                        </li>
-                        <li class="flex items-center gap-x-2">
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                            High torque capacity with long operational service life
-                        </li>
-                    </ul>
-
-                    <details class="mb-6 group border border-slate-200 rounded-xl bg-slate-50/50 overflow-hidden">
-                        <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
-                            <span class="flex items-center gap-2">
-                                <i class="fas fa-table text-blue-600"></i> View XHR SERIES
-                            </span>
-                            <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
-                        </summary>
-                        <div class="p-3 overflow-x-auto bg-white border-t border-slate-200">
-                            <h4 class="text-center font-bold text-slate-900 mb-3 text-xs uppercase">XHR Series Parameter Table</h4>
-                            <table class="w-full text-[11px] text-center border-collapse border border-slate-300">
-                                <thead class="bg-slate-100 text-slate-800 font-semibold border-b border-slate-300">
-                                    <tr>
-                                        <th class="py-2 px-2 border border-slate-300 text-left">Specification</th>
-                                        <th class="py-2 px-1 border border-slate-300">XHR7014</th>
-                                        <th class="py-2 px-1 border border-slate-300">XHR8017</th>
-                                        <th class="py-2 px-1 border border-slate-300">XHR9020</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-300 text-slate-700">
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Reducer Size</td>
-                                        <td class="py-2 px-1 border border-slate-300">14</td>
-                                        <td class="py-2 px-1 border border-slate-300">17</td>
-                                        <td class="py-2 px-1 border border-slate-300">20</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Reduction Ratio</td>
-                                        <td class="py-2 px-1 border border-slate-300">30 / 50 / 80 / 100</td>
-                                        <td class="py-2 px-1 border border-slate-300">30 / 50 / 80 / 100 / 120</td>
-                                        <td class="py-2 px-1 border border-slate-300">30 / 50 / 80 / 100 / 120 / 160</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated Torque (2000 r/min)</td>
-                                        <td class="py-2 px-1 border border-slate-300">3.8 / 5.1 / 7.6 / 7.6 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">8.6 / 15.4 / 21.5 / 23 / 23 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">13 / 24 / 32 / 39 / 39 / 39 Nm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Starting & Stopping Permissible Peak Torque</td>
-                                        <td class="py-2 px-1 border border-slate-300">8.5 / 16 / 22 / 27 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">15 / 32 / 42 / 50 / 50 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">25 / 52 / 71 / 77 / 82 / 88 Nm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Average Load Torque</td>
-                                        <td class="py-2 px-1 border border-slate-300">6.7 / 6.8 / 10.5 / 10.5 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">11 / 25 / 26 / 36 / 36 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">18 / 32 / 45 / 47 / 47 / 47 Nm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Instantaneous Permissible Maximum Torque</td>
-                                        <td class="py-2 px-1 border border-slate-300">16.5 / 33.5 / 46 / 53 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">28 / 68 / 84 / 105 / 82 Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">47 / 95 / 123 / 142 / 142 / 142 Nm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated Input Speed</td>
-                                        <td class="py-2 px-1 border border-slate-300">7000 r/min</td>
-                                        <td class="py-2 px-1 border border-slate-300">6000 r/min</td>
-                                        <td class="py-2 px-1 border border-slate-300">5200 r/min</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Maximum Input Speed</td>
-                                        <td class="py-2 px-1 border border-slate-300">3500 r/min</td>
-                                        <td class="py-2 px-1 border border-slate-300">3500 r/min</td>
-                                        <td class="py-2 px-1 border border-slate-300">3500 r/min</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Backlash</td>
-                                        <td class="py-2 px-1 border border-slate-300">≤20 arc sec (30/50)<br>≤10 arc sec (80/100)</td>
-                                        <td class="py-2 px-1 border border-slate-300">≤20 arc sec (30/50)<br>≤10 arc sec (80/100/120)</td>
-                                        <td class="py-2 px-1 border border-slate-300">≤20 arc sec (30/50)<br>≤10 arc sec (80/100/120/160)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Weight</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.52 kg</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.67 kg</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.95 kg</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Design Life</td>
-                                        <td class="py-2 px-1 border border-slate-300">12000 h / 15000 h</td>
-                                        <td class="py-2 px-1 border border-slate-300">12000 h / 15000 h</td>
-                                        <td class="py-2 px-1 border border-slate-300">12000 h / 15000 h</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="mt-2 text-[10px] text-slate-500 text-left space-y-0.5">
-                                <p class="font-semibold">Note:</p>
-                                <p>1. Rated torque is measured at 2000 r/min input speed.</p>
-                                <p>2. Design life may vary depending on operating conditions.</p>
-                            </div>
-                        </div>
-                    </details>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">PRODUCT PORTFOLIO</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Precision Reducers</h2>
                 </div>
-
-                <a href="downloads/XHR_Technical_Package.zip" download 
-                   class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
-                    <i class="fas fa-download"></i> Download Technical Specs (ZIP)
-                </a>
+                <p class="text-sm text-slate-500 max-w-md mt-2 md:mt-0">Compact, high-torque drivetrain components optimized for seamless integration into modern robotic joints.</p>
             </div>
             
-            <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col justify-between shadow-sm">
-                <div>
-                    <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center">
-                        <img src="images/prod-xcr.png" alt="XCR Cycloidal Reducer" class="w-full h-full object-contain scale-110 hover:scale-120 transition-transform duration-300">
-                    </div>
-
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold text-slate-900">XCR Series</h3>
-                        <span class="px-2.5 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-md border border-amber-200">Cycloidal / RV Drive</span>
-                    </div>
-                    <p class="text-xs font-medium text-slate-400 mb-3">Heavy-Load High-Rigidity Transmission</p>
-                    <p class="text-sm text-slate-600 mb-5 leading-relaxed">
-                        Designed for high impact resistance and severe duty cycles. Provides robust torsional stiffness for heavy-duty industrial robots.
-                    </p>
-                    
-                    <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6">
-                        <li class="flex items-center gap-x-2">
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                            Extreme shock load capability (up to 500% rated torque)
-                        </li>
-                        <li class="flex items-center gap-x-2">
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                            Superior torsional rigidity for heavy payload handling
-                        </li>
-                        <li class="flex items-center gap-x-2">
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                            Stable speed reduction with low vibration signature
-                        </li>
-                    </ul>
-
-                    <details class="mb-6 group border border-slate-200 rounded-xl bg-slate-50/50 overflow-hidden">
-                        <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
-                            <span class="flex items-center gap-2">
-                                <i class="fas fa-table text-amber-600"></i> View XCR SERIES
-                            </span>
-                            <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
-                        </summary>
-                        <div class="p-3 overflow-x-auto bg-white border-t border-slate-200">
-                            <h4 class="text-center font-bold text-slate-900 mb-3 text-xs uppercase">XCR Series Parameter Table</h4>
-                            <table class="w-full text-[11px] text-center border-collapse border border-slate-300">
-                                <thead class="bg-slate-100 text-slate-800 font-semibold border-b border-slate-300">
-                                    <tr>
-                                        <th class="py-2 px-2 border border-slate-300 text-left">Parameter</th>
-                                        <th class="py-2 px-1 border border-slate-300">Unit</th>
-                                        <th class="py-2 px-1 border border-slate-300">XCR30</th>
-                                        <th class="py-2 px-1 border border-slate-300">XCR55</th>
-                                        <th class="py-2 px-1 border border-slate-300">XCR86</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-300 text-slate-700">
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Size</td>
-                                        <td class="py-2 px-1 border border-slate-300">mm</td>
-                                        <td class="py-2 px-1 border border-slate-300">15 / 21 / 51</td>
-                                        <td class="py-2 px-1 border border-slate-300">21 / 31 / 51 / 81</td>
-                                        <td class="py-2 px-1 border border-slate-300">21 / 31 / 51 / 81 / 101</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Reduction ratio</td>
-                                        <td class="py-2 px-1 border border-slate-300">-</td>
-                                        <td class="py-2 px-1 border border-slate-300">16 / 22 / 52</td>
-                                        <td class="py-2 px-1 border border-slate-300">22 / 32 / 52 / 82</td>
-                                        <td class="py-2 px-1 border border-slate-300">22 / 32 / 52 / 82 / 102</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated output torque</td>
-                                        <td class="py-2 px-1 border border-slate-300">Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">12</td>
-                                        <td class="py-2 px-1 border border-slate-300">82</td>
-                                        <td class="py-2 px-1 border border-slate-300">127</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. acceleration / deceleration torque</td>
-                                        <td class="py-2 px-1 border border-slate-300">Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">21</td>
-                                        <td class="py-2 px-1 border border-slate-300">162</td>
-                                        <td class="py-2 px-1 border border-slate-300">252</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Permissible torque at emergency stop</td>
-                                        <td class="py-2 px-1 border border-slate-300">Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">30</td>
-                                        <td class="py-2 px-1 border border-slate-300">240</td>
-                                        <td class="py-2 px-1 border border-slate-300">380</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated input speed</td>
-                                        <td class="py-2 px-1 border border-slate-300">rpm</td>
-                                        <td class="py-2 px-1 border border-slate-300">3000</td>
-                                        <td class="py-2 px-1 border border-slate-300">3000</td>
-                                        <td class="py-2 px-1 border border-slate-300">3000</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. input speed</td>
-                                        <td class="py-2 px-1 border border-slate-300">rpm</td>
-                                        <td class="py-2 px-1 border border-slate-300">6000</td>
-                                        <td class="py-2 px-1 border border-slate-300">6000</td>
-                                        <td class="py-2 px-1 border border-slate-300">5500</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Tilting stiffness</td>
-                                        <td class="py-2 px-1 border border-slate-300">Nm/arcmin</td>
-                                        <td class="py-2 px-1 border border-slate-300">9</td>
-                                        <td class="py-2 px-1 border border-slate-300">60</td>
-                                        <td class="py-2 px-1 border border-slate-300">130</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Torsional stiffness</td>
-                                        <td class="py-2 px-1 border border-slate-300">Nm/arcmin</td>
-                                        <td class="py-2 px-1 border border-slate-300">1.5</td>
-                                        <td class="py-2 px-1 border border-slate-300">8</td>
-                                        <td class="py-2 px-1 border border-slate-300">18</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. radial force</td>
-                                        <td class="py-2 px-1 border border-slate-300">KN</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.6</td>
-                                        <td class="py-2 px-1 border border-slate-300">2.5</td>
-                                        <td class="py-2 px-1 border border-slate-300">5.5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. axial force</td>
-                                        <td class="py-2 px-1 border border-slate-300">KN</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.8</td>
-                                        <td class="py-2 px-1 border border-slate-300">3.3</td>
-                                        <td class="py-2 px-1 border border-slate-300">7.1</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. no-load starting torque</td>
-                                        <td class="py-2 px-1 border border-slate-300">Nm</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.12 / 0.11 / 0.10</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.19 / 0.19 / 0.18 / 0.18</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.40 / 0.37 / 0.35 / 0.34 / 0.33</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Average angular transmission error</td>
-                                        <td class="py-2 px-1 border border-slate-300">arcsec</td>
-                                        <td class="py-2 px-1 border border-slate-300">±30</td>
-                                        <td class="py-2 px-1 border border-slate-300">±20</td>
-                                        <td class="py-2 px-1 border border-slate-300">±20</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Backlash accuracy</td>
-                                        <td class="py-2 px-1 border border-slate-300">arcmin</td>
-                                        <td class="py-2 px-1 border border-slate-300">p0≤1 / p1≤3 / p2≤5</td>
-                                        <td class="py-2 px-1 border border-slate-300">p0≤1 / p1≤3 / p2≤5</td>
-                                        <td class="py-2 px-1 border border-slate-300">p0≤1 / p1≤3 / p2≤5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Moment of inertia</td>
-                                        <td class="py-2 px-1 border border-slate-300">10<sup>-6</sup> kgm<sup>2</sup></td>
-                                        <td class="py-2 px-1 border border-slate-300">0.3</td>
-                                        <td class="py-2 px-1 border border-slate-300">3.5</td>
-                                        <td class="py-2 px-1 border border-slate-300">6.2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-2 px-2 border border-slate-300 text-left font-medium">Weight</td>
-                                        <td class="py-2 px-1 border border-slate-300">kg</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.05</td>
-                                        <td class="py-2 px-1 border border-slate-300">0.8</td>
-                                        <td class="py-2 px-1 border border-slate-300">2.18</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="mt-2 text-[10px] text-slate-500 text-left space-y-0.5">
-                                <p>p0: Backlash accuracy (minimum)</p>
-                                <p>p1: Backlash accuracy (standard)</p>
-                                <p>p2: Backlash accuracy (precision)</p>
-                            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center">
+                            <img src="images/prod-xhr.png" alt="XHR Harmonic Reducer" class="w-full h-full object-contain scale-110 hover:scale-120 transition-transform duration-300">
                         </div>
-                    </details>
-                </div>
 
-                <a href="downloads/XCR_Technical_Package.zip" download 
-                   class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
-                    <i class="fas fa-download"></i> Download Technical Specs (ZIP)
-                </a>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-slate-900">XHR Series</h3>
+                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md border border-blue-200">Harmonic Drive</span>
+                        </div>
+                    
+                        <p class="text-xs font-medium text-slate-400 mb-3">Strain Wave Precision Gearing System</p>
+                        <p class="text-sm text-slate-600 mb-5 leading-relaxed">
+                            Engineered for lightweight, high-torque, and near-zero backlash applications. Ideal for robotic joints, cobots, and medical surgical arms.
+                        </p>
+                        
+                        <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-x-2">
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                                Ultra-flat hollow-shaft & component design options
+                            </li>
+                            <li class="flex items-center gap-x-2">
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                                Exceptional positioning accuracy & low hysteresis
+                            </li>
+                            <li class="flex items-center gap-x-2">
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                                High torque capacity with long operational service life
+                            </li>
+                        </ul>
+
+                        <details class="mb-6 group border border-slate-200 rounded-xl bg-slate-50/50 overflow-hidden">
+                            <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
+                                <span class="flex items-center gap-2">
+                                    <i class="fas fa-table text-blue-600"></i> View XHR SERIES
+                                </span>
+                                <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="p-3 overflow-x-auto bg-white border-t border-slate-200">
+                                <h4 class="text-center font-bold text-slate-900 mb-3 text-xs uppercase">XHR Series Parameter Table</h4>
+                                <table class="w-full text-[11px] text-center border-collapse border border-slate-300">
+                                    <thead class="bg-slate-100 text-slate-800 font-semibold border-b border-slate-300">
+                                        <tr>
+                                            <th class="py-2 px-2 border border-slate-300 text-left">Specification</th>
+                                            <th class="py-2 px-1 border border-slate-300">XHR7014</th>
+                                            <th class="py-2 px-1 border border-slate-300">XHR8017</th>
+                                            <th class="py-2 px-1 border border-slate-300">XHR9020</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-300 text-slate-700">
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Reducer Size</td>
+                                            <td class="py-2 px-1 border border-slate-300">14</td>
+                                            <td class="py-2 px-1 border border-slate-300">17</td>
+                                            <td class="py-2 px-1 border border-slate-300">20</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Reduction Ratio</td>
+                                            <td class="py-2 px-1 border border-slate-300">30 / 50 / 80 / 100</td>
+                                            <td class="py-2 px-1 border border-slate-300">30 / 50 / 80 / 100 / 120</td>
+                                            <td class="py-2 px-1 border border-slate-300">30 / 50 / 80 / 100 / 120 / 160</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated Torque (2000 r/min)</td>
+                                            <td class="py-2 px-1 border border-slate-300">3.8 / 5.1 / 7.6 / 7.6 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">8.6 / 15.4 / 21.5 / 23 / 23 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">13 / 24 / 32 / 39 / 39 / 39 Nm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Starting & Stopping Permissible Peak Torque</td>
+                                            <td class="py-2 px-1 border border-slate-300">8.5 / 16 / 22 / 27 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">15 / 32 / 42 / 50 / 50 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">25 / 52 / 71 / 77 / 82 / 88 Nm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Average Load Torque</td>
+                                            <td class="py-2 px-1 border border-slate-300">6.7 / 6.8 / 10.5 / 10.5 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">11 / 25 / 26 / 36 / 36 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">18 / 32 / 45 / 47 / 47 / 47 Nm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Instantaneous Permissible Maximum Torque</td>
+                                            <td class="py-2 px-1 border border-slate-300">16.5 / 33.5 / 46 / 53 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">28 / 68 / 84 / 105 / 82 Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">47 / 95 / 123 / 142 / 142 / 142 Nm</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated Input Speed</td>
+                                            <td class="py-2 px-1 border border-slate-300">7000 r/min</td>
+                                            <td class="py-2 px-1 border border-slate-300">6000 r/min</td>
+                                            <td class="py-2 px-1 border border-slate-300">5200 r/min</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Maximum Input Speed</td>
+                                            <td class="py-2 px-1 border border-slate-300">3500 r/min</td>
+                                            <td class="py-2 px-1 border border-slate-300">3500 r/min</td>
+                                            <td class="py-2 px-1 border border-slate-300">3500 r/min</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Backlash</td>
+                                            <td class="py-2 px-1 border border-slate-300">≤20 arc sec (30/50)<br>≤10 arc sec (80/100)</td>
+                                            <td class="py-2 px-1 border border-slate-300">≤20 arc sec (30/50)<br>≤10 arc sec (80/100/120)</td>
+                                            <td class="py-2 px-1 border border-slate-300">≤20 arc sec (30/50)<br>≤10 arc sec (80/100/120/160)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Weight</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.52 kg</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.67 kg</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.95 kg</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Design Life</td>
+                                            <td class="py-2 px-1 border border-slate-300">12000 h / 15000 h</td>
+                                            <td class="py-2 px-1 border border-slate-300">12000 h / 15000 h</td>
+                                            <td class="py-2 px-1 border border-slate-300">12000 h / 15000 h</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="mt-2 text-[10px] text-slate-500 text-left space-y-0.5">
+                                    <p class="font-semibold">Note:</p>
+                                    <p>1. Rated torque is measured at 2000 r/min input speed.</p>
+                                    <p>2. Design life may vary depending on operating conditions.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <a href="downloads/XHR_Technical_Package.zip" download 
+                       class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                        <i class="fas fa-download"></i> Download Technical Specs (ZIP)
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 product-card flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="aspect-[16/10] bg-slate-50 rounded-xl overflow-hidden border border-slate-100 mb-5 flex items-center justify-center">
+                            <img src="images/prod-xcr.png" alt="XCR Cycloidal Reducer" class="w-full h-full object-contain scale-110 hover:scale-120 transition-transform duration-300">
+                        </div>
+
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-slate-900">XCR Series</h3>
+                            <span class="px-2.5 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-md border border-amber-200">Cycloidal / RV Drive</span>
+                        </div>
+                        <p class="text-xs font-medium text-slate-400 mb-3">Heavy-Load High-Rigidity Transmission</p>
+                        <p class="text-sm text-slate-600 mb-5 leading-relaxed">
+                            Designed for high impact resistance and severe duty cycles. Provides robust torsional stiffness for heavy-duty industrial robots.
+                        </p>
+                        
+                        <ul class="space-y-2.5 text-xs font-medium text-slate-700 mb-6">
+                            <li class="flex items-center gap-x-2">
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                                Extreme shock load capability (up to 500% rated torque)
+                            </li>
+                            <li class="flex items-center gap-x-2">
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                                Superior torsional rigidity for heavy payload handling
+                            </li>
+                            <li class="flex items-center gap-x-2">
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                                Stable speed reduction with low vibration signature
+                            </li>
+                        </ul>
+
+                        <details class="mb-6 group border border-slate-200 rounded-xl bg-slate-50/50 overflow-hidden">
+                            <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-xs font-bold text-slate-800 bg-slate-100/80 hover:bg-slate-200/60 transition-colors select-none">
+                                <span class="flex items-center gap-2">
+                                    <i class="fas fa-table text-amber-600"></i> View XCR SERIES
+                                </span>
+                                <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <div class="p-3 overflow-x-auto bg-white border-t border-slate-200">
+                                <h4 class="text-center font-bold text-slate-900 mb-3 text-xs uppercase">XCR Series Parameter Table</h4>
+                                <table class="w-full text-[11px] text-center border-collapse border border-slate-300">
+                                    <thead class="bg-slate-100 text-slate-800 font-semibold border-b border-slate-300">
+                                        <tr>
+                                            <th class="py-2 px-2 border border-slate-300 text-left">Parameter</th>
+                                            <th class="py-2 px-1 border border-slate-300">Unit</th>
+                                            <th class="py-2 px-1 border border-slate-300">XCR30</th>
+                                            <th class="py-2 px-1 border border-slate-300">XCR55</th>
+                                            <th class="py-2 px-1 border border-slate-300">XCR86</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-300 text-slate-700">
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Size</td>
+                                            <td class="py-2 px-1 border border-slate-300">mm</td>
+                                            <td class="py-2 px-1 border border-slate-300">15 / 21 / 51</td>
+                                            <td class="py-2 px-1 border border-slate-300">21 / 31 / 51 / 81</td>
+                                            <td class="py-2 px-1 border border-slate-300">21 / 31 / 51 / 81 / 101</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Reduction ratio</td>
+                                            <td class="py-2 px-1 border border-slate-300">-</td>
+                                            <td class="py-2 px-1 border border-slate-300">16 / 22 / 52</td>
+                                            <td class="py-2 px-1 border border-slate-300">22 / 32 / 52 / 82</td>
+                                            <td class="py-2 px-1 border border-slate-300">22 / 32 / 52 / 82 / 102</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated output torque</td>
+                                            <td class="py-2 px-1 border border-slate-300">Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">12</td>
+                                            <td class="py-2 px-1 border border-slate-300">82</td>
+                                            <td class="py-2 px-1 border border-slate-300">127</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. acceleration / deceleration torque</td>
+                                            <td class="py-2 px-1 border border-slate-300">Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">21</td>
+                                            <td class="py-2 px-1 border border-slate-300">162</td>
+                                            <td class="py-2 px-1 border border-slate-300">252</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Permissible torque at emergency stop</td>
+                                            <td class="py-2 px-1 border border-slate-300">Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">30</td>
+                                            <td class="py-2 px-1 border border-slate-300">240</td>
+                                            <td class="py-2 px-1 border border-slate-300">380</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Rated input speed</td>
+                                            <td class="py-2 px-1 border border-slate-300">rpm</td>
+                                            <td class="py-2 px-1 border border-slate-300">3000</td>
+                                            <td class="py-2 px-1 border border-slate-300">3000</td>
+                                            <td class="py-2 px-1 border border-slate-300">3000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. input speed</td>
+                                            <td class="py-2 px-1 border border-slate-300">rpm</td>
+                                            <td class="py-2 px-1 border border-slate-300">6000</td>
+                                            <td class="py-2 px-1 border border-slate-300">6000</td>
+                                            <td class="py-2 px-1 border border-slate-300">5500</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Tilting stiffness</td>
+                                            <td class="py-2 px-1 border border-slate-300">Nm/arcmin</td>
+                                            <td class="py-2 px-1 border border-slate-300">9</td>
+                                            <td class="py-2 px-1 border border-slate-300">60</td>
+                                            <td class="py-2 px-1 border border-slate-300">130</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Torsional stiffness</td>
+                                            <td class="py-2 px-1 border border-slate-300">Nm/arcmin</td>
+                                            <td class="py-2 px-1 border border-slate-300">1.5</td>
+                                            <td class="py-2 px-1 border border-slate-300">8</td>
+                                            <td class="py-2 px-1 border border-slate-300">18</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. radial force</td>
+                                            <td class="py-2 px-1 border border-slate-300">KN</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.6</td>
+                                            <td class="py-2 px-1 border border-slate-300">2.5</td>
+                                            <td class="py-2 px-1 border border-slate-300">5.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. axial force</td>
+                                            <td class="py-2 px-1 border border-slate-300">KN</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.8</td>
+                                            <td class="py-2 px-1 border border-slate-300">3.3</td>
+                                            <td class="py-2 px-1 border border-slate-300">7.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Max. no-load starting torque</td>
+                                            <td class="py-2 px-1 border border-slate-300">Nm</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.12 / 0.11 / 0.10</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.19 / 0.19 / 0.18 / 0.18</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.40 / 0.37 / 0.35 / 0.34 / 0.33</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Average angular transmission error</td>
+                                            <td class="py-2 px-1 border border-slate-300">arcsec</td>
+                                            <td class="py-2 px-1 border border-slate-300">±30</td>
+                                            <td class="py-2 px-1 border border-slate-300">±20</td>
+                                            <td class="py-2 px-1 border border-slate-300">±20</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Backlash accuracy</td>
+                                            <td class="py-2 px-1 border border-slate-300">arcmin</td>
+                                            <td class="py-2 px-1 border border-slate-300">p0≤1 / p1≤3 / p2≤5</td>
+                                            <td class="py-2 px-1 border border-slate-300">p0≤1 / p1≤3 / p2≤5</td>
+                                            <td class="py-2 px-1 border border-slate-300">p0≤1 / p1≤3 / p2≤5</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Moment of inertia</td>
+                                            <td class="py-2 px-1 border border-slate-300">10<sup>-6</sup> kgm<sup>2</sup></td>
+                                            <td class="py-2 px-1 border border-slate-300">0.3</td>
+                                            <td class="py-2 px-1 border border-slate-300">3.5</td>
+                                            <td class="py-2 px-1 border border-slate-300">6.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-2 border border-slate-300 text-left font-medium">Weight</td>
+                                            <td class="py-2 px-1 border border-slate-300">kg</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.05</td>
+                                            <td class="py-2 px-1 border border-slate-300">0.8</td>
+                                            <td class="py-2 px-1 border border-slate-300">2.18</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="mt-2 text-[10px] text-slate-500 text-left space-y-0.5">
+                                    <p>p0: Backlash accuracy (minimum)</p>
+                                    <p>p1: Backlash accuracy (standard)</p>
+                                    <p>p2: Backlash accuracy (precision)</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <a href="downloads/XCR_Technical_Package.zip" download 
+                       class="w-full py-2.5 bg-slate-900 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-x-2 transition-colors">
+                        <i class="fas fa-download"></i> Download Technical Specs (ZIP)
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-    
-    <section id="applications" class="py-16 bg-white border-t border-slate-200/80">
+    </section>
+<section id="applications" class="py-16 bg-white border-y border-slate-200/80">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">INDUSTRIES & USAGE</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Target Robotics Applications</h2>
-                <p class="text-sm text-slate-500 mt-2">Precision-matched drive solutions built for harsh environments and micron-level accuracy requirements.</p>
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Target Industries</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Industrial Applications</h2>
+                <p class="text-slate-600 text-sm mt-2">
+                    Delivering motion control accuracy to sectors where precision, reliability, and compact integration are non-negotiable.
+                </p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
-                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-                        <img src="images/app-humanoid.jpg" alt="Humanoid Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-slate-900 text-sm mb-1">Humanoid Actuators</h3>
-                        <p class="text-xs text-slate-500 leading-snug">Compact joint modules for leg and arm motion control.</p>
-                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Industrial Robotics</h3>
+                    <p class="text-xs text-slate-500">6-axis articulated arms, SCARA, and delta robots requiring compact joint speed reduction.</p>
                 </div>
                 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
-                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-                        <img src="images/app-cobot.jpg" alt="Collaborative Robot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-slate-900 text-sm mb-1">Collaborative Robots</h3>
-                        <p class="text-xs text-slate-500 leading-snug">Smooth, precise transmission for multi-axis Cobots.</p>
-                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Semiconductor Equipment</h3>
+                    <p class="text-xs text-slate-500">Wafer handling systems and cleanroom pick-and-place automation with low backlash.</p>
                 </div>
                 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
-                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-                        <img src="images/app-Equipment.jpg" alt="Semiconductor Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-user-md"></i>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-slate-900 text-sm mb-1">Semiconductor Systems</h3>
-                        <p class="text-xs text-slate-500 leading-snug">Wafer handling and ultra-clean stage positioners.</p>
-                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Medical Technology</h3>
+                    <p class="text-xs text-slate-500">Surgical robotics, diagnostic positioning platforms, and high-precision imaging drives.</p>
                 </div>
                 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden group hover:border-blue-300 transition-all">
-                    <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-                        <img src="images/app-Automation.jpg" alt="Industrial Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-lg">
+                        <i class="fas fa-satellite-dish"></i>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-slate-900 text-sm mb-1">Industrial Automation</h3>
-                        <p class="text-xs text-slate-500 leading-snug">CNC rotary tables, indexing heads & medical equipment.</p>
-                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm mb-1">Aerospace & Optics</h3>
+                    <p class="text-xs text-slate-500">Antenna tracking mechanisms, optical gimbals, and satellite positioning actuators.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="resources" class="py-16 bg-slate-50 border-t border-slate-200/80">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-10 items-center">
-                <div class="md:col-span-5 space-y-4">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">TECHNICAL DOCUMENTATION</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Engineering Downloads</h2>
-                    <p class="text-sm text-slate-600 leading-relaxed">Access official XIORVE commercial documentation, technical drawing specifications, and installation manuals.</p>
-                    
-                    <div class="pt-2 space-y-3">
-                        <div onclick="downloadPDF('catalog')" class="p-4 bg-white border border-slate-200 hover:border-blue-400 rounded-xl cursor-pointer flex items-center justify-between shadow-sm transition-all group">
-                            <div class="flex items-center gap-x-3">
-                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-lg">
-                                    <i class="fas fa-file-pdf"></i>
-                                </div>
-                                <div>
-                                    <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Commercial Terms & Ordering</div>
-                                    <div class="text-xs text-slate-400">PDF • Standard Models & Ordering Codes</div>
-                                </div>
-                            </div>
-                            <i class="fas fa-download text-slate-400 group-hover:text-blue-600 transition-colors text-sm"></i>
+    <section id="support" class="py-16 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">CUSTOMER CENTER</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Support</h2>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                    XIORVE provides professional technical support, documentation services, and flexible business solutions to support customers worldwide.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-slate-900 font-bold text-base hover:bg-slate-50/80 transition-colors select-none">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-headset text-blue-600 text-lg w-5"></i>
+                            Technical Support
+                        </span>
+                        <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-sm text-slate-600 border-t border-slate-100 space-y-3">
+                        <p>Our engineering team provides support for product selection, technical consultation, and application guidance.</p>
+                        <div>
+                            <strong class="text-slate-800">Support includes:</strong>
+                            <ul class="list-disc list-inside mt-2 space-y-1.5 text-slate-600 pl-1">
+                                <li>Product selection assistance</li>
+                                <li>Technical parameter confirmation</li>
+                                <li>Installation guidance</li>
+                                <li>Application consultation</li>
+                                <li>Communication protocol support</li>
+                            </ul>
                         </div>
+                        <p class="text-xs text-slate-500 italic pt-1">For technical inquiries, please contact the XIORVE support team.</p>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-slate-900 font-bold text-base hover:bg-slate-50/80 transition-colors select-none">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-file-alt text-blue-600 text-lg w-5"></i>
+                            Product Documentation
+                        </span>
+                        <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-sm text-slate-600 border-t border-slate-100 space-y-3">
+                        <p>XIORVE provides complete product documentation to help customers evaluate and integrate our products.</p>
+                        <div>
+                            <strong class="text-slate-800">Available resources include:</strong>
+                            <ul class="list-disc list-inside mt-2 space-y-1.5 text-slate-600 pl-1">
+                                <li>Product Catalog</li>
+                                <li>Technical Datasheets</li>
+                                <li>User Manuals</li>
+                                <li>2D Drawings</li>
+                                <li>3D CAD Models</li>
+                                <li>Communication Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-slate-900 font-bold text-base hover:bg-slate-50/80 transition-colors select-none">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-shopping-cart text-blue-600 text-lg w-5"></i>
+                            Ordering Support
+                        </span>
+                        <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-sm text-slate-600 border-t border-slate-100 space-y-3">
+                        <p>XIORVE supports global customers with a simple and efficient ordering process.</p>
+                        <div>
+                            <strong class="text-slate-800">Order Process:</strong>
+                            <ol class="list-decimal list-inside mt-2 space-y-1.5 text-slate-600 pl-1">
+                                <li>Product selection and technical confirmation</li>
+                                <li>Quotation and order confirmation</li>
+                                <li>Payment arrangement</li>
+                                <li>Production and shipment</li>
+                            </ol>
+                        </div>
+                        <p class="text-xs text-slate-500 italic pt-1">Our team will assist customers throughout the entire purchasing process.</p>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-slate-900 font-bold text-base hover:bg-slate-50/80 transition-colors select-none">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-credit-card text-blue-600 text-lg w-5"></i>
+                            Payment Methods
+                        </span>
+                        <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-sm text-slate-600 border-t border-slate-100 space-y-4">
+                        <p>XIORVE supports secure and flexible international payment solutions for global customers.</p>
                         
-                        <div onclick="downloadPDF('profile')" class="p-4 bg-white border border-slate-200 hover:border-blue-400 rounded-xl cursor-pointer flex items-center justify-between shadow-sm transition-all group">
-                            <div class="flex items-center gap-x-3">
-                                <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center text-lg">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                                <div>
-                                    <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Engineering & Installation Guide</div>
-                                    <div class="text-xs text-slate-400">PDF • Lubrication, Tolerances & Assembly</div>
-                                </div>
-                            </div>
-                            <i class="fas fa-download text-slate-400 group-hover:text-blue-600 transition-colors text-sm"></i>
+                        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200/80 space-y-1">
+                            <h4 class="font-bold text-slate-800 text-sm">International Wire Transfer (T/T)</h4>
+                            <p class="text-xs text-slate-600">Recommended for standard orders and bulk purchases.</p>
+                            <p class="text-xs text-slate-500 pt-1">Customers can complete payment through international bank transfer using the provided bank information and commercial documents.</p>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="md:col-span-7 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                    <h3 class="font-bold text-lg text-slate-900 mb-6 flex items-center gap-x-2">
-                        <i class="fas fa-award text-blue-600"></i> Why Engineers Choose XIORVE
-                    </h3>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="space-y-4">
-                            <div>
-                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
-                                    <i class="fas fa-microchip text-blue-600 text-xs"></i> Motion Control Focus
-                                </div>
-                                <p class="text-xs text-slate-500 leading-relaxed">Exclusively dedicated to precision strain-wave and cycloidal transmission systems.</p>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
-                                    <i class="fas fa-sliders-h text-blue-600 text-xs"></i> Strict Tolerances
-                                </div>
-                                <p class="text-xs text-slate-500 leading-relaxed">State-of-the-art grinding and gear meshing inspection for long lifespan.</p>
-                            </div>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
-                                    <i class="fas fa-globe-europe text-blue-600 text-xs"></i> European Standards
-                                </div>
-                                <p class="text-xs text-slate-500 leading-relaxed">Fully aligned with ISO quality frameworks and European industrial requirements.</p>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-slate-800 text-sm mb-1 flex items-center gap-x-2">
-                                    <i class="fas fa-truck-fast text-blue-600 text-xs"></i> Fast Technical Support
-                                </div>
-                                <p class="text-xs text-slate-500 leading-relaxed">Direct 3D Step CAD files and selection support within 24 hours.</p>
+
+                        <div class="p-4 rounded-lg bg-slate-50 border border-slate-200/80 space-y-2">
+                            <h4 class="font-bold text-slate-800 text-sm">Secure Payment Link</h4>
+                            <p class="text-xs text-slate-600">Recommended for sample orders and small quantity purchases.</p>
+                            <p class="text-xs text-slate-500">XIORVE can provide a secure payment link, allowing customers to complete payment conveniently through international online payment methods.</p>
+                            <div class="pt-1">
+                                <strong class="text-slate-800 text-xs">Supported payment methods include:</strong>
+                                <ul class="list-disc list-inside mt-1 space-y-1 text-xs text-slate-600 pl-1">
+                                    <li>Credit Card</li>
+                                    <li>Debit Card</li>
+                                    <li>International Bank Card</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-slate-900 font-bold text-base hover:bg-slate-50/80 transition-colors select-none">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-truck text-blue-600 text-lg w-5"></i>
+                            Shipping Support
+                        </span>
+                        <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-sm text-slate-600 border-t border-slate-100 space-y-3">
+                        <p>XIORVE provides international shipping support for customers worldwide.</p>
+                        <div>
+                            <strong class="text-slate-800">Shipping solutions include:</strong>
+                            <ul class="list-disc list-inside mt-2 space-y-1.5 text-slate-600 pl-1">
+                                <li>Express Delivery</li>
+                                <li>Air Freight</li>
+                                <li>Other international logistics solutions</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-slate-500 italic pt-1">Shipping methods will be selected according to order quantity, destination, and customer requirements.</p>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex items-center justify-between px-6 py-4 cursor-pointer text-slate-900 font-bold text-base hover:bg-slate-50/80 transition-colors select-none">
+                        <span class="flex items-center gap-3">
+                            <i class="fas fa-shield-alt text-blue-600 text-lg w-5"></i>
+                            Warranty & Service
+                        </span>
+                        <i class="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-sm text-slate-600 border-t border-slate-100 space-y-3">
+                        <p>XIORVE is committed to providing reliable product quality and customer service.</p>
+                        <div>
+                            <strong class="text-slate-800">Service includes:</strong>
+                            <ul class="list-disc list-inside mt-2 space-y-1.5 text-slate-600 pl-1">
+                                <li>Product quality support</li>
+                                <li>Technical assistance</li>
+                                <li>After-sales consultation</li>
+                                <li>Continuous customer support</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-slate-500 italic pt-1">For any questions regarding products, orders, or technical requirements, please contact XIORVE.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-16 bg-white border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-10">
+            <div class="md:col-span-5 space-y-6">
                 <div>
                     <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">GET IN TOUCH</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1 leading-tight">Ready to Build Your Next Robotics Project?</h2>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Whether you need harmonic reducers, joint modules, or customized transmission solutions, our engineering team is ready to help.</p>
-                    
-                    <div class="mt-8 space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-lg flex-shrink-0">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-slate-400 font-medium uppercase">Email Sales Inquiry</div>
-                                <a href="mailto:sales@xiorve.com" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">sales@xiorve.com</a>
-                            </div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Request Technical Quote</h2>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Submit your requirements or model specifications. Our motion control engineering team will respond with complete CAD models, technical drawings, and pricing within 24 hours.
+                    </p>
+                </div>
+                
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-start gap-x-4">
+                        <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-11 h-11 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 text-lg flex-shrink-0">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-slate-400 font-medium uppercase">WhatsApp Direct</div>
-                                <a href="https://wa.me/85261435966" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">+852 6143 5966</a>
-                            </div>
+                        <div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Sales & Technical Inquiry</div>
+                            <div class="text-sm font-semibold text-slate-800">sales@xiorve.com</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-x-4">
+                        <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Response Time</div>
+                            <div class="text-sm font-semibold text-slate-800">&lt; 24 Hours Guarantee</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-x-4">
+                        <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold text-slate-400 uppercase">Global Service</div>
+                            <div class="text-sm font-semibold text-slate-800">Worldwide Shipping & Support</div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
-                   <form id="contact-form" class="space-y-4">
-                        <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
-                        <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
-    
+            </div>
+            
+            <div class="md:col-span-7">
+                <form action="https://formspree.io/f/xvzwvyer" method="POST" class="bg-slate-50 border border-slate-200/80 p-6 md:p-8 rounded-2xl space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <input type="text" name="Name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Full Name *</label>
+                            <input type="text" name="name" required placeholder="John Doe" 
+                                   class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
-                            <input type="email" name="Email" placeholder="Business Email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Company / Organization *</label>
+                            <input type="text" name="company" required placeholder="Robotics Solutions Inc." 
+                                   class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Work Email *</label>
+                            <input type="email" name="email" required placeholder="john@company.com" 
+                                   class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
-                            <textarea name="Message" placeholder="Tell us about your project requirements or requested gear ratios..." rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white"></textarea>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Interested Product Series</label>
+                            <select name="product_series" class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="XHR Harmonic Reducer">XHR Series (Harmonic Reducer)</option>
+                                <option value="XCR Cycloidal Reducer">XCR Series (Cycloidal Reducer)</option>
+                                <option value="Both / Custom Engineering">Both / Custom Engineering Solution</option>
+                            </select>
                         </div>
-    
-                        <button type="submit" id="submit-btn" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
-                            Send Message
-                        </button>
-                    </form>
-                    <div id="result" class="text-center text-sm mt-2 font-medium hidden"></div>
-                </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Technical Requirements / Message *</label>
+                        <textarea name="message" rows="4" required placeholder="Please state required reduction ratio, torque capacity, payload, or target application details..." 
+                                  class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm shadow-md shadow-blue-500/20 transition-all flex items-center justify-center gap-x-2">
+                        <i class="fas fa-paper-plane"></i> Submit Request
+                    </button>
+                    
+                    <p class="text-[11px] text-slate-400 text-center">
+                        Your technical information is strictly confidential and protected by XIORVE privacy policy.
+                    </p>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black text-lg">X</div>
-                    <div>
-                        <span class="font-extrabold text-xl tracking-tight">XIORVE</span>
-                        <span class="text-slate-400 text-xs block">Focused on Robotics. Built for Precision.</span>
-                    </div>
+    <footer class="bg-slate-900 text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-8 mb-8">
+            <div class="md:col-span-5 space-y-3">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-extrabold text-lg">X</div>
+                    <span class="font-extrabold text-xl text-white tracking-tight">XIORVE</span>
                 </div>
-                <div class="text-slate-400 text-xs">
-                    © 2026 XIORVE. All Rights Reserved. Precision Motion Transmission.
-                </div>
+                <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                    Precision motion control engineering. Designing next-generation Harmonic and Cycloidal reduction gearing for global industrial automation.
+                </p>
+            </div>
+            
+            <div class="md:col-span-3">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#products" onclick="navigateTo('products')" class="hover:text-white transition-colors">XHR Harmonic Reducers</a></li>
+                    <li><a href="#products" onclick="navigateTo('products')" class="hover:text-white transition-colors">XCR Cycloidal Reducers</a></li>
+                    <li><a href="#support" onclick="navigateTo('support')" class="hover:text-white transition-colors">Support & Payment Options</a></li>
+                    <li><a href="#contact" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Request Technical Quote</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-4">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Direct Contact</h4>
+                <p class="text-xs text-slate-400 mb-2">Technical Sales & Customer Engineering Team:</p>
+                <div class="text-sm font-semibold text-blue-400">sales@xiorve.com</div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-y-2">
+            <div>&copy; 2026 XIORVE Precision Transmission Ltd. All rights reserved.</div>
+            <div class="flex gap-x-4">
+                <span>ISO9001 Certified Quality</span>
+                <span>•</span>
+                <span>RoHS Compliant</span>
             </div>
         </div>
     </footer>
-        
+
     <script>
-        const form = document.getElementById('contact-form');
-        const result = document.getElementById('result');
-        const submitBtn = document.getElementById('submit-btn');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-    
-            submitBtn.innerText = "Sending...";
-            submitBtn.disabled = true;
-    
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let resJson = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = "Message sent successfully!";
-                    result.className = "text-center text-sm mt-2 font-medium text-green-600";
-                    form.reset();
-                } else {
-                    // 如果报错，直接把错误原因打印在网页上！
-                    result.innerHTML = resJson.message || "Something went wrong!";
-                    result.className = "text-center text-sm mt-2 font-medium text-red-600";
-                }
-            })
-            .catch(error => {
-                result.innerHTML = "Network Error! Please check your connection or CORS settings.";
-                result.className = "text-center text-sm mt-2 font-medium text-red-600";
-            })
-            .then(function() {
-                submitBtn.innerText = "Send Message";
-                submitBtn.disabled = false;
-                result.classList.remove('hidden');
-            });
-        });
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
