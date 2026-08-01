@@ -676,72 +676,70 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="py-16 bg-white border-t border-slate-200">
+   <section id="contact" class="py-16 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="max-w-2xl"> 
-            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">GET IN TOUCH</span>
-            <h2 class="text-3xl font-extrabold text-slate-900 mt-1 leading-tight">Ready to Build Your Next Robotics Project?</h2>
-            <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-                Whether you need harmonic reducers, cycloidal reducers, or customized transmission solutions, our engineering team is ready to help.
-            </p> 
-            <div class="mt-8 flex items-start gap-8">
-                 <div class="space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-lg flex-shrink-0">
-                            <i class="fas fa-envelope"></i>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">GET IN TOUCH</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1 leading-tight">Ready to Build Your Next Robotics Project?</h2>
+                <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+                    Whether you need harmonic reducers, cycloidal reducers, or customized transmission solutions, our engineering team is ready to help.
+                </p>
+                <div class="mt-8 flex items-center gap-6">
+                   <!-- Email + WhatsApp -->
+                    <div class="space-y-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-lg flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium uppercase">Email Sales Inquiry</div>
+                                <a href="mailto:sales@xiorve.com" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">sales@xiorve.com</a>
+                            </div>
                         </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium uppercase">Email Sales Inquiry</div>
-                            <a href="mailto:sales@xiorve.com" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">sales@xiorve.com</a>
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 text-lg flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium uppercase">WhatsApp Business</div>
+                                <a href="https://wa.me/85261435966" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">+852 6143 5966</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-11 h-11 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 text-lg flex-shrink-0">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium uppercase">WhatsApp Business</div>
-                            <a href="https://wa.me/85261435966" class="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">+852 6143 5966</a>
-                        </div>
+                    <div class="flex flex-col items-center">
+                        <img src="images/qrcode-contact.png" 
+                             alt="Scan to contact XIORVE" 
+                             class="w-24 h-24 rounded-lg border border-slate-200 shadow-sm">
+                        <p class="mt-1.5 text-[10px] text-slate-500 text-center leading-tight">
+                            Scan for Website<br>Email · WhatsApp
+                        </p>
                     </div>
                 </div>
-                <div class="flex flex-col items-center pt-1">
-                    <img src="images/qrcode-contact.png" 
-                         alt="Scan to contact XIORVE" 
-                         class="w-28 h-28 rounded-lg shadow-sm">
-                    <p class="mt-2 text-[11px] text-slate-500 text-center leading-tight">
-                        Scan for Website<br>Email · WhatsApp
-                    </p>
-                </div>
-
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
+               <form id="contact-form" class="space-y-4">
+                    <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
+                    <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
+                    <div>
+                        <input type="text" name="Name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
+                    </div>
+                    <div>
+                        <input type="email" name="Email" placeholder="Business Email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
+                    </div>
+                    <div>
+                        <textarea name="Message" placeholder="Tell us about your project requirements or requested gear ratios..." rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white"></textarea>
+                    </div>
+   
+                    <button type="submit" id="submit-btn" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
+                        Send Message
+                    </button>
+                </form>
+                <div id="result" class="text-center text-sm mt-2 font-medium hidden"></div>
             </div>
         </div>
     </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 shadow-sm">
-                   <form id="contact-form" class="space-y-4">
-                        <input type="hidden" name="access_key" value="fb4ad9d0-153d-4ad1-bc22-fd6e8e476c36">
-                        <input type="hidden" name="subject" value="XIORVE Website New Inquiry!">
-    
-                        <div>
-                            <input type="text" name="Name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
-                        </div>
-                        <div>
-                            <input type="email" name="Email" placeholder="Business Email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white">
-                        </div>
-                        <div>
-                            <textarea name="Message" placeholder="Tell us about your project requirements or requested gear ratios..." rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 bg-white"></textarea>
-                        </div>
-    
-                        <button type="submit" id="submit-btn" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors shadow-sm">
-                            Send Message
-                        </button>
-                    </form>
-                    <div id="result" class="text-center text-sm mt-2 font-medium hidden"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+</section>
     <footer class="bg-slate-900 text-white border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
