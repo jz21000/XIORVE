@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XIORVE | Harmonic & Cycloidal Reducers for Robotics, Automation & Precision Equipment</title>
-    <meta name="description" content="XIORVE provides precision harmonic and cycloidal reducers for robotics, automation systems, semiconductor equipment and precision machinery applications. Standard models, small-batch orders and technical support available.">
+    <meta name="description" content="XIORVE provides precision harmonic and cycloidal reducers for robotics, automation systems, semiconductor equipment and precision machinery applications. Standard products, engineering support and small-batch solutions for global customers.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -654,7 +654,6 @@ Standard models, technical support and small-batch solutions available.
                             <li>Production and shipment</li>
                         </ol>
                     </div>
-                    </div>
                     <p>We support samples and small-batch orders.  
 Typical lead time for standard models: 10–14 days to Europe and USA via express courier.</p>
             </details>
@@ -853,10 +852,8 @@ Typical lead time for standard models: 10–14 days to Europe and USA via expres
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-    
             submitBtn.innerText = "Sending...";
             submitBtn.disabled = true;
-    
             const formData = new FormData(form);
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
@@ -876,7 +873,6 @@ Typical lead time for standard models: 10–14 days to Europe and USA via expres
                     result.className = "text-center text-sm mt-2 font-medium text-green-600";
                     form.reset();
                 } else {
-                    // 如果报错，直接把错误原因打印在网页上！
                     result.innerHTML = resJson.message || "Something went wrong!";
                     result.className = "text-center text-sm mt-2 font-medium text-red-600";
                 }
@@ -900,32 +896,6 @@ Typical lead time for standard models: 10–14 days to Europe and USA via expres
             document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
             document.getElementById('mobile-menu').classList.add('hidden');
         }
-        
-        function downloadPDF(type) {
-            let filename = '';
-            if (type === 'catalog') {
-                filename = 'Commercial Terms & Ordering information.pdf';
-            } else if (type === 'profile') {
-                filename = 'Installation & Engineering Guide.pdf';
-            }
-            
-            const link = document.createElement('a');
-            link.href = 'downloads/' + filename;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            alert(`Downloading ${filename}... (Demo - in real deployment these would be actual PDFs)`);
-        }
-    
-        document.addEventListener('keydown', function(e) {
-            if (e.key === '/' && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
-                e.preventDefault();
-                toggleMobileMenu();
-            }
-        });
-        
         console.log('%cXIORVE Website Loaded Successfully ✅', 'color:#2563eb; font-size:13px; font-family:monospace');
     </script>
 </body>
